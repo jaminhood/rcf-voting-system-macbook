@@ -11,7 +11,7 @@ const CandidateProfileCard: FC<{ candidate: Candidate }> = ({ candidate }) => {
 		<>
 			<div className="w-full p-2 rounded-lg relative overflow-hidden h-120 flex group flex-col-reverse cursor-pointer">
 				<Image
-					src={candidate.image_url}
+					src={`${process.env.NEXT_PUBLIC_API_URL}${candidate.image_url}`}
 					className="w-full h-full object-cover z-0 object-top group-hover:scale-110 transition-all ease-in-out duration-300"
 					alt="/placeholder.jpg"
 					fill
