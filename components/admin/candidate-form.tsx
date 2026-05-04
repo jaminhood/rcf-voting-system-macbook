@@ -37,7 +37,7 @@ const CandidateForm: FC<Props> = ({ candidate }) => {
 	const [name, setName] = useState(candidate?.name ?? "")
 	const [position, setPosition] = useState(candidate?.position ?? "")
 	const [image, setImage] = useState<File | null>(null)
-	const [preview, setPreview] = useState<string | null>(candidate?.image_url ?? null)
+	const [preview, setPreview] = useState<string | null>(candidate?.image_url ? `${process.env.NEXT_PUBLIC_API_URL}public${candidate?.image_url}` : null)
 	const [loading, setLoading] = useState(false)
 	const [error, setError] = useState<string | null>(null)
 

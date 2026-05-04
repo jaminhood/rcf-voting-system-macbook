@@ -60,12 +60,12 @@ export default function CandidatesPage() {
 						<div
 							key={c.id}
 							className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-700 overflow-hidden">
-							<div className="relative h-48 bg-zinc-100 dark:bg-zinc-800">
+							<div className="relative h-62 bg-zinc-100 dark:bg-zinc-800">
 								<Image
-									src={c.image_url}
+									src={`${process.env.NEXT_PUBLIC_API_URL}public${c.image_url}`}
 									alt={c.name}
 									fill
-									className="object-cover object-top"
+									className="object-cover object-bottom"
 								/>
 							</div>
 							<div className="p-4">
