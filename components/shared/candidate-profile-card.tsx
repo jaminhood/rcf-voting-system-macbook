@@ -16,15 +16,15 @@ const CandidateProfileCard: FC<{ candidate: Candidate }> = ({ candidate }) => {
 					alt="/placeholder.jpg"
 					fill
 				/>
-				<div className="p-4 rounded-2xl dark:bg-zinc-100 z-10 relative mt-auto transition-all ease-in-out duration-300">
-					<h2 className="dark:text-zinc-950 font-black text-2xl">{truncate(candidate.name, 17)}</h2>
-					<h6 className="dark:text-zinc-800 italic text-xs">
+				<div className="p-4 rounded-2xl dark:bg-zinc-100 bg-zinc-950 z-10 relative mt-auto transition-all ease-in-out duration-300">
+					<h2 className="dark:text-zinc-950 text-zinc-100 font-black text-2xl">{truncate(candidate.name, 17)}</h2>
+					<h6 className="dark:text-zinc-800 text-zinc-200 italic text-xs">
 						{"{"} {candidate.position} {"}"}
 					</h6>
 					<hr className="my-2 border-t border-zinc-300" />
 					<div className="flex justify-between items-center">
-						<h5 className="dark:text-zinc-950 font-black text-sm">Votes Count:</h5>
-						<h5 className="dark:text-zinc-950 font-black text-sm">{candidate.votes}</h5>
+						<h5 className="dark:text-zinc-950 text-zinc-100 font-black text-sm">Votes Count:</h5>
+						<h5 className="dark:text-zinc-950 text-zinc-200 font-black text-sm">{candidate.votes}</h5>
 					</div>
 					<div>
 						<button
