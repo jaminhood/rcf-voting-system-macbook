@@ -9,15 +9,17 @@ const CandidateProfileCard: FC<{ candidate: Candidate }> = ({ candidate }) => {
 
 	return (
 		<>
-			<div className="w-full p-2 rounded-lg relative overflow-hidden h-120 flex group flex-col-reverse cursor-pointer">
-				<Image
-					src={`${process.env.NEXT_PUBLIC_API_URL}${candidate.image_url}`}
-					className="w-full h-full object-cover z-0 object-top group-hover:scale-110 transition-all ease-in-out duration-300"
-					alt="/placeholder.jpg"
-					fill
-				/>
-				<div className="p-4 rounded-2xl dark:bg-zinc-100 bg-zinc-950 z-10 relative mt-auto transition-all ease-in-out duration-300">
-					<h2 className="dark:text-zinc-950 text-zinc-100 font-black text-2xl">{truncate(candidate.name, 17)}</h2>
+			<div className="w-full rounded-lg overflow-hidden flex group flex-col cursor-pointer">
+				<div className="h-80 relative overflow-hidden">
+					<Image
+						src={`${process.env.NEXT_PUBLIC_API_URL}public${candidate.image_url}`}
+						className="w-full h-full object-cover z-0 object-bottom group-hover:scale-110 transition-all ease-in-out duration-300"
+						alt={candidate.name}
+						fill
+					/>
+				</div>
+				<div className="p-4 -mt-8 rounded-t-2xl dark:bg-zinc-100 bg-zinc-950 z-10 transition-all ease-in-out duration-300">
+					<h2 className="dark:text-zinc-950 text-zinc-100 font-black text-2xl h-20">{truncate(candidate.name, 30)}</h2>
 					<h6 className="dark:text-zinc-800 text-zinc-200 italic text-xs">
 						{"{"} {candidate.position} {"}"}
 					</h6>
