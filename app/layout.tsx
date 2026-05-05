@@ -29,6 +29,12 @@ export default function RootLayout({
 		<html
 			lang="en"
 			className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+			<link
+				rel="icon"
+				href="/favicon.png"
+				type="image/png"
+				sizes="32x32"
+			/>
 			<body className="min-h-full flex flex-col">
 				<AuthProvider>
 					<AppProvider>{children}</AppProvider>
