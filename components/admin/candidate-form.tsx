@@ -27,6 +27,7 @@ const awardTitles = [
 	"Christian Model of the Year (Male)",
 	"Christian Model of the Year (Female)",
 	"Praise Machine of the Year",
+	"Entrepreneur of the year",
 ]
 
 const CandidateForm: FC<Props> = ({ candidate }) => {
