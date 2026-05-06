@@ -18,7 +18,7 @@ const CandidateProfileCard: FC<{ candidate: Candidate }> = ({ candidate }) => {
 						fill
 					/>
 				</div>
-				<div className="p-4 -mt-8 rounded-t-2xl dark:bg-zinc-100 bg-white/80 z-10 transition-all ease-in-out duration-300">
+				<div className="p-4 -mt-8 rounded-t-2xl dark:bg-zinc-100 bg-white z-10 transition-all ease-in-out duration-300">
 					<h2 className="text-zinc-950 font-black text-2xl">{truncate(candidate.name, 20)}</h2>
 					<h6 className="text-zinc-800 italic text-xs">
 						{"{"} {candidate.position} {"}"}
