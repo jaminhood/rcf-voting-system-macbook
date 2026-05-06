@@ -18,7 +18,7 @@ const CandidateProfileCard: FC<{ candidate: Candidate }> = ({ candidate }) => {
 						fill
 					/>
 				</div>
-				<div className="p-4 -mt-8 rounded-t-2xl dark:bg-zinc-100 bg-zinc-950 z-10 transition-all ease-in-out duration-300">
+				<div className="p-4 -mt-8 rounded-t-2xl dark:bg-zinc-100 bg-zinc-400 z-10 transition-all ease-in-out duration-300">
 					<h2 className="dark:text-zinc-950 text-zinc-100 font-black text-2xl h-20">{truncate(candidate.name, 26)}</h2>
 					<h6 className="dark:text-zinc-800 text-zinc-200 italic text-xs">
 						{"{"} {candidate.position} {"}"}
@@ -31,7 +31,7 @@ const CandidateProfileCard: FC<{ candidate: Candidate }> = ({ candidate }) => {
 					<div>
 						<button
 							onClick={() => setShowModal(true)}
-							className="h-12 w-full cursor-pointer inline-flex items-center mt-4 justify-center rounded-2xl uppercase font-black tracking-widest border border-solid border-black/8 px-5 transition-colors dark:bg-zinc-950 dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-full">
+							className="h-12 w-full cursor-pointer text-zinc-400 inline-flex items-center mt-4 justify-center rounded-2xl uppercase font-black tracking-widest border border-solid border-black/8 px-5 transition-colors dark:bg-zinc-950 dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-full">
 							Vote
 						</button>
 					</div>
