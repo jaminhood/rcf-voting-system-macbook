@@ -10,7 +10,7 @@ const CandidateProfileCard: FC<{ candidate: Candidate }> = ({ candidate }) => {
 	return (
 		<>
 			<div className="w-full rounded-lg overflow-hidden flex group flex-col cursor-pointer">
-				<div className="h-80 relative overflow-hidden">
+				<div className="h-96 relative overflow-hidden">
 					<Image
 						src={`${process.env.NEXT_PUBLIC_API_URL}public${candidate.image_url}`}
 						className="w-full h-full object-cover z-0 object-bottom group-hover:scale-110 transition-all ease-in-out duration-300"
@@ -19,7 +19,7 @@ const CandidateProfileCard: FC<{ candidate: Candidate }> = ({ candidate }) => {
 					/>
 				</div>
 				<div className="p-4 -mt-8 rounded-t-2xl dark:bg-zinc-100 bg-zinc-400 z-10 transition-all ease-in-out duration-300">
-					<h2 className="text-zinc-950 font-black text-2xl h-20">{truncate(candidate.name, 26)}</h2>
+					<h2 className="text-zinc-950 font-black text-2xl">{truncate(candidate.name, 20)}</h2>
 					<h6 className="text-zinc-800 italic text-xs">
 						{"{"} {candidate.position} {"}"}
 					</h6>
