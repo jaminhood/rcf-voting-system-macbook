@@ -26,7 +26,7 @@ const CandidateProfile = () => {
 	}, [])
 
 	return (
-		<section className="grid md:grid-cols-3 grid-cols-1 gap-8 w-full max-w-5xl p-4 bg-zinc-50 dark:bg-black">
+		<section className="grid md:grid-cols-3 grid-cols-1 gap-8 w-full max-w-7xl p-4 bg-zinc-50 dark:bg-black">
 			{loading && (
 				<div className="md:col-span-3 justify-center items-center py-8 px-4">
 					<p className="dark:text-zinc-100 text-zinc-900 text-center">Loading Candidates</p>
