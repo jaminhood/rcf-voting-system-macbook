@@ -9,8 +9,8 @@ const CandidateProfileCard: FC<{ candidate: Candidate }> = ({ candidate }) => {
 
 	return (
 		<>
-			<div className="w-full rounded-lg overflow-hidden flex group flex-col cursor-pointer">
-				<div className="h-96 relative overflow-hidden">
+			<div className="w-full rounded-lg overflow-hidden flex group flex-col cursor-pointer shadow-2xl">
+				<div className="h-100 relative overflow-hidden">
 					<Image
 						src={`${process.env.NEXT_PUBLIC_API_URL}public${candidate.image_url}`}
 						className="w-full h-full object-cover z-0 object-bottom group-hover:scale-110 transition-all ease-in-out duration-300"
