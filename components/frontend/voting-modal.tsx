@@ -106,6 +106,9 @@ const VotingModal: FC<Props> = ({ candidate, onClose }) => {
 							</button>
 						</div>
 
+						<p className="text-zinc-500 text-sm">Account Number: 5073720757</p>
+						<p className="text-zinc-500 text-sm">Account Name: Benjamin Onyebuch Ovu</p>
+						<p className="text-zinc-500 text-sm mb-5">Bank Name: Moniepoint</p>
 						<p className="text-zinc-500 text-sm mb-5">Upload your proof of payment to submit your vote. Your request will be reviewed by an admin before your vote is counted.</p>
 
 						{error && <div className="text-red-500 text-sm mb-4 bg-red-50 dark:bg-red-950 border border-red-100 dark:border-red-900 p-3 rounded-xl">{error}</div>}
