@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
 	title: "RCF Voting System",
-	description: "Built By JaminHood",
+	description: "Built By NexBiT Tech",
 }
 
 export default function RootLayout({
