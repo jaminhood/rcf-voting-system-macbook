@@ -18,6 +18,14 @@ const VotingModal: FC<Props> = ({ candidate, onClose }) => {
 	const [submitted, setSubmitted] = useState(false)
 	const [error, setError] = useState<string | null>(null)
 	const fileRef = useRef<HTMLInputElement>(null)
+	// Add this state at the top with your other useState hooks
+	const [copied, setCopied] = useState(false)
+
+	const handleCopy = () => {
+		navigator.clipboard.writeText("5073720757")
+		setCopied(true)
+		setTimeout(() => setCopied(false), 2000)
+	}
 
 	const totalAmount = voteCount * PRICE_PER_VOTE
 
@@ -113,7 +121,52 @@ const VotingModal: FC<Props> = ({ candidate, onClose }) => {
 
 								<div className="flex items-center justify-between gap-4">
 									<span className="text-xs text-zinc-500 shrink-0">Account Number</span>
-									<span className="text-sm font-mono font-medium text-zinc-100 tracking-wider">5073720757</span>
+									<div className="flex items-center gap-2">
+										<span className="text-sm font-mono font-medium text-zinc-100 tracking-wider">5073720757</span>
+										<button
+											onClick={handleCopy}
+											className="flex items-center gap-1 px-2 py-1 rounded-md bg-zinc-700/60 hover:bg-zinc-600/60 transition-colors">
+											{copied ? (
+												<>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														className="w-3 h-3 text-green-400"
+														viewBox="0 0 24 24"
+														fill="none"
+														stroke="currentColor"
+														strokeWidth="2.5"
+														strokeLinecap="round"
+														strokeLinejoin="round">
+														<polyline points="20 6 9 17 4 12" />
+													</svg>
+													<span className="text-xs text-green-400 font-medium">Copied</span>
+												</>
+											) : (
+												<>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														className="w-3 h-3 text-zinc-400"
+														viewBox="0 0 24 24"
+														fill="none"
+														stroke="currentColor"
+														strokeWidth="2"
+														strokeLinecap="round"
+														strokeLinejoin="round">
+														<rect
+															x="9"
+															y="9"
+															width="13"
+															height="13"
+															rx="2"
+															ry="2"
+														/>
+														<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+													</svg>
+													<span className="text-xs text-zinc-400 font-medium">Copy</span>
+												</>
+											)}
+										</button>
+									</div>
 								</div>
 
 								<div className="flex items-center justify-between gap-4">
