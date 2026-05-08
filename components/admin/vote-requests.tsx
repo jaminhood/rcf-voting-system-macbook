@@ -268,7 +268,7 @@ const VoteRequests = () => {
 							<div className="flex items-center justify-between">
 								<p className="text-xs text-zinc-400">{fmt(r.created_at)}</p>
 								<a
-									href={`${process.env.NEXT_PUBLIC_API_URL}${r.proof_url}`}
+									href={`${process.env.NEXT_PUBLIC_API_URL}public${r.proof_url}`}
 									target="_blank"
 									rel="noreferrer"
 									className="text-xs px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700 font-bold dark:text-white">
