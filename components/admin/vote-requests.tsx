@@ -201,7 +201,7 @@ const VoteRequests = () => {
 									</td>
 									<td className="px-4 py-3">
 										<a
-											href={`${process.env.NEXT_PUBLIC_API_URL}${r.proof_url}`}
+											href={`${process.env.NEXT_PUBLIC_API_URL}public${r.proof_url}`}
 											target="_blank"
 											rel="noreferrer"
 											className="text-xs px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700 font-bold dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
