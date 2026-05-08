@@ -102,7 +102,7 @@ const VoteRequests = () => {
 		pending: requests.filter(r => r.status === "pending").length,
 		approved: requests.filter(r => r.status === "approved").length,
 		rejected: requests.filter(r => r.status === "rejected").length,
-		totalVotes: requests.filter(r => r.status === "approved").reduce((sum, r) => sum + r.vote_count, 0),
+		totalVotes: requests.filter(r => r.status === "approved").reduce((sum, r) => sum + Number(r.vote_count), 0),
 		totalRevenue: requests.filter(r => r.status === "approved").reduce((sum, r) => sum + r.vote_count * PRICE_PER_VOTE, 0),
 	}
 
