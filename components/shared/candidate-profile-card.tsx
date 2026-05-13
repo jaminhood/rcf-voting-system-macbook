@@ -9,25 +9,25 @@ const CandidateProfileCard: FC<{ candidate: Candidate }> = ({ candidate }) => {
 
 	return (
 		<>
-			<div className="w-full rounded-lg overflow-hidden flex group flex-col cursor-pointer shadow-2xl">
-				<div className="h-100 relative overflow-hidden">
+			<div className="flex flex-col w-full overflow-hidden rounded-lg shadow-2xl cursor-pointer group">
+				<div className="relative overflow-hidden h-100">
 					<Image
 						src={`${process.env.NEXT_PUBLIC_API_URL}public${candidate.image_url}`}
-						className="w-full h-full object-cover z-0 object-bottom group-hover:scale-110 transition-all ease-in-out duration-300"
+						className="z-0 object-cover object-bottom w-full h-full transition-all duration-300 ease-in-out group-hover:scale-110"
 						alt={candidate.name}
 						fill
 					/>
 				</div>
-				<div className="p-4 -mt-8 rounded-t-2xl dark:bg-zinc-100 bg-white z-10 transition-all ease-in-out duration-300">
-					<h2 className="text-zinc-950 font-black text-2xl">{truncate(candidate.name, 20)}</h2>
-					<h6 className="text-zinc-800 italic text-xs">
+				<div className="z-10 p-4 -mt-8 transition-all duration-300 ease-in-out bg-white rounded-t-2xl dark:bg-zinc-100">
+					<h2 className="text-2xl font-black text-zinc-950">{truncate(candidate.name, 20)}</h2>
+					<h6 className="text-xs italic text-zinc-800">
 						{"{"} {candidate.position} {"}"}
 					</h6>
 					<hr className="my-2 border-t border-zinc-300" />
-					<div className="flex justify-between items-center">
-						<h5 className="text-zinc-950 font-black text-sm">Votes Count:</h5>
-						<h5 className="text-zinc-950 font-black text-sm">{candidate.votes}</h5>
-					</div>
+					{/* <div className="flex items-center justify-between">
+						<h5 className="text-sm font-black text-zinc-950">Votes Count:</h5>
+						<h5 className="text-sm font-black text-zinc-950">{candidate.votes}</h5>
+					</div> */}
 					<div>
 						<button
 							onClick={() => setShowModal(true)}
